@@ -18,48 +18,23 @@ ng serve
 
 Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
 
-## Code scaffolding
+Approach:
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+As mentioned in the task assignment, only list component is grouped as a module and its being lazy loaded. Rest of the components are standalone by default. 
 
-```bash
-ng generate component component-name
-```
+Shared Module:
+  Material Module
+  In all the components as we are using Angular material, moved it to a shared module.
+  
+  Component
+  1. Navbar
+  2. Loader
+  3. Table
+  These are the components that are being shared, so its part of shared folder structure but not part of module, as they are standalone components. We can create a modular approach if required.
+  Also, table component is created keeping reusability in mind, such a way that if we need more places same tabular data, we just need to pass the column definition and the data, rest the component should handle it. Table component is an example of dumb component.
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+Interceptors
+1. AuthInterceptor
+2. LoaderInterceptor
 
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Apart from this, there is a mix of approach e.g. some places used traditional DI approach in another place functional approach.
