@@ -1,0 +1,18 @@
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.table th, .table td {
+  padding: 8px;
+  border: 1px solid #ccc;
+}
+
+.error {
+  color: red;
+}
+
+.retry-btn {
+  font-size: 16px;
+  vertical-align: middle;
+  color: red;
+}

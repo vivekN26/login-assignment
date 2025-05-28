@@ -1,0 +1,10 @@
+<app-navbar></app-navbar>
+
+<mat-card appearance="outlined" class="welcome-box">
+        <mat-card-title>Welcome {{ authService.getUserEmail() }}</mat-card-title>
+        <mat-card-content>
+            <button mat-raised-button color="primary" [routerLink]="['/list']">
+                Go to List Page
+            </button>
+        </mat-card-content>
+</mat-card>

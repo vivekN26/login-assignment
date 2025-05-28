@@ -1,0 +1,39 @@
+@if(columns.length > 0) {
+    @if(loading) {
+        <div>
+            Loading....
+        </div>    
+    }
+    @if(error !== null) {
+        <div class="error">{{error}}
+            <button class="retry-btn" mat-icon-button color="warn" (click)="retry()">
+            <mat-icon  fontIcon="refresh"></mat-icon>
+            </button>
+        </div>
+    }
+    @if(!loading && !error) {
+        <table>
+            <thead>
+                <tr>
+                    @for(column of columns; track column.columnDef) {
+                    <th>
+                        {{column.header}}
+                    </th>
+                    }
+                </tr>
+            </thead>
+            <tbody>
+                @for(row of data; track row.id) {
+                    <tr>
+                        @for(column of columns; track column.columnDef) {
+                            <td>
+                                {{ row[column.columnDef]}}
+                            </td>
+                        }
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+
+}

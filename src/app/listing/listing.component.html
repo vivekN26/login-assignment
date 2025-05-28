@@ -1,0 +1,18 @@
+<app-navbar></app-navbar>
+
+<div class="list-table">
+    <mat-card appearance="outlined">
+        <mat-card-title>
+            Items List
+        </mat-card-title>
+        <mat-card-content>
+            <app-list-table 
+            [columns]="COLUMN_DEF" 
+            [data]="items()" 
+            [loading]="loading()" 
+            [error]="error()"
+            (retryTrigger)="getItems(true)"
+            ></app-list-table>
+        </mat-card-content>
+    </mat-card>
+</div>
