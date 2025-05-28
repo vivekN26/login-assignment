@@ -3,12 +3,18 @@
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.13.
 
 ## Development server
+Once code is pulled, do
+```bash
+npm install
+```
+To test if there is any test environment backend, you can navigate to environment.ts file and modify the baseUrl property. 
 
 To start a local development server, run:
 
 ```bash
 ng serve
 ```
+
 
 Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
 
