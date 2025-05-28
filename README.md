@@ -7,7 +7,7 @@ Once code is pulled, do
 ```bash
 npm install
 ```
-To test if there is any test environment backend, you can navigate to environment.ts file and modify the baseUrl property. 
+To test if there is any test environment backend, you can navigate to environment.ts file and modify the `baseUrl` property. 
 
 To start a local development server, run:
 
